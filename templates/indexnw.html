@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Review Page</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+            <link rel="stylesheet" href="./style.css">
+          <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+          <h1> Calculator </h1>
+    </head>
+    <body>
+        <table>
+        <td></td>
+        <form action="/operation", method="POST">
+            <label for="num1">Enter first number:</label><br>
+            <input type="text" name="num1" id="num1"><br>
+            <label for="num2">Enter second number</label><br>
+            <input type="text" name="num2" id="num2"><br>
+            <select id="operation", name="operation">
+            <option value="add">add</option>
+            <option value="subtract">subtract</option>
+            <option value="multiply">multiply</option>
+            <option value="divide">divide</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Calculate">
+            <br>
+        </form>
+    </table>
+    </body>
+</html>
